@@ -127,9 +127,13 @@ header {
     color: #33a1ff;
 }
 
+.grey {
+    color: #3c3e3f;
+}
+
 .gradient {
-    background: linear-gradient(135deg, #41403f, #5d5d5d, #a0a0a1); /* Градієнтний фон */
-    padding-top: 50px;
+    background: linear-gradient(135deg, #41403f, #5d5d5d, #a0a0a1);
+    padding-top: 150px;
 }
 
 .next-section {
@@ -166,11 +170,11 @@ header {
 }
 
 .yellow {
-    color: #ffbd2e; /* темно-жовтий колір */
+    color: #b7a439;
 }
 
 .blue {
-    color: #33a1ff; /* голубий колір */
+    color: #33a1ff;
 }
 
 .images {
@@ -207,4 +211,164 @@ header {
 
 .image:hover .caption {
     opacity: 1;
+}
+
+.static {
+    background: linear-gradient(135deg, #41403f, #5d5d5d, #a0a0a1);
+    padding-top: 50px;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.statistic {
+    text-align: center;
+}
+
+.statistic h2 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.statistic p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.dot {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.yellowdot {
+    background-color: #ffbd2e;
+}
+
+.pinkdot {
+    background-color: #ff6b81;
+}
+
+.bluedot {
+    background-color: #33a1ff;
+}
+
+.greendot {
+    background-color: #66ff66;
+}
+
+.last-section {
+    background-color: #151419;
+    color: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.last-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.last-section .text {
+    margin-bottom: 20px;
+}
+
+.last-section .text p {
+    margin: 0;
+    font-size: 24px;
+}
+
+.yellowtext {
+    color: #ffbd2e;
+}
+
+.bluetext {
+    color: #33a1ff;
+}
+
+.redtext {
+    color: #ff5733;
+}
+
+.start-button {
+    background-color: #ffbd2e;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.start-button:hover {
+    background-color: #ff5733;
+    color: #fff;
+}
+
+.last-last-section {
+    background-color: #151419;
+    color: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.title {
+    font-size: 26px;
+}
+
+.big {
+    font-size: 48px;
+}
+
+.last-last-section {
+    background-color: #151419;
+    color: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.last-last-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.start2-button {
+    background-color: #ffbd2e;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.start2-button:hover {
+    background-color: #ff5733;
+    color: #fff;
+}
+
+.footer1 {
+    background-color: #151419;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    text-align: center
 }
