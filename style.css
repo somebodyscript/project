@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #222030;
+    color: #000000;
+    padding: 20px 0;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.navbar li a:hover::after {
+    width: 100%;
+}
+
+.sections {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section {
+    flex: 1;
+    background-color: #E2FF74;
+    padding: 50px 0;
+    min-height: 80px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 20px;
+}
+
+.icon img {
+    width: 50px;
+    height: auto;
+}
+
+.text h4 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.text p {
+    margin: 10px 0 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.main-section {
+    background-color: #222030;
+    padding-top: 170px;
+    padding-bottom: 168px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text {
+    text-align: center;
+}
+
+.text p {
+    margin: 0;
+    font-size: 24px;
+    color: #c9c8c8;
+}
+
+.red {
+    color: #ff5733;
+}
+
+.white {
+    color: #ffffff;
+}
+
+.green {
+    color: #66ff66;
+}
+
+.blue {
+    color: #33a1ff;
+}
+
+.gradient {
+    background: linear-gradient(135deg, #41403f, #5d5d5d, #a0a0a1); /* Градієнтний фон */
+    padding-top: 50px;
+}
+
+.next-section {
+    background-color: #151419;
+    padding-top: 140px;
+    padding-bottom: 30px;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.left-content {
+    flex: 1;
+}
+
+.right-content {
+    flex: 1;
+}
+
+.left-content p {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.left-content h4 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.yellow {
+    color: #ffbd2e; /* темно-жовтий колір */
+}
+
+.blue {
+    color: #33a1ff; /* голубий колір */
+}
+
+.images {
+    display: flex;
+}
+
+.image {
+    position: relative;
+    margin-right: 20px;
+}
+
+.image img {
+    width: 200px;
+    height: auto;
+    transition: filter 0.3s;
+}
+
+.image:hover img {
+    filter: brightness(40%);
+}
+
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image:hover .caption {
+    opacity: 1;
+}
