@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музей Технологій ♾️</title>
+    <link rel="stylesheet" href="./mainstyle.css">
+    <link rel="stylesheet" href="./normalize.css">
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <button id="VirtualButton">Віртуальний екскурсовод</button>
+            <h1>Ласкаво <span>просимо</span></h1>
+            <p class="ty">Та дякуємо що обрали нас</p> <button id="textToSpeechButton">Озвучити текст</button>
+        </div>
+        <div class="post">
+            <div class="left-section">
+                <h2>Як працюють ШІ</h2>
+                <p class="ty-design">ШІ це система яка зазвичай працює на системах, серверах, комп'ютерах та інших цифрових пристроїв та яка оброблює інформацію.</p>
+                <p class="ty-design">ШІ базується на використанні алгоритмів та статистичних моделей, що дозволяє комп'ютерам "вчитися" на основі великої кількості даних. Одним з ключових методів в ШІ є машинне навчання, яке дозволяє системам адаптуватися до нової інформації та покращувати свої результати з часом.</p>
+                <p class="ty-design">Як працює ШІ: Спочатку ШІ отримує текст/інформацію або запит, обично його називають "промпт", ШІ читає цей промпт, аналізує його та шукає максимально точні данні з інтернету та доповнює їх, так працюють текстові ШІ, наприклад ChatGPT, Google Bard, Microsoft Copilot та інші</p>
+            </div>
+            <div class="right-section">
+                <img src="aii1.jpeg" alt="ШІ Image 1">
+                <img src="aii2.jpg" alt="ШІ Image 2">
+                <img src="aii3.png" alt="ШІ Image 3">
+            </div>
+        </div>
+        <div class="post">
+            <div class="left-section">
+                <h2>Як працюють хостинги</h2>
+                <p class="ty-design">Хостинг - це послуга, яка надає користувачам можливість розміщувати свої веб-сайти та додатки на серверах, доступних через Інтернет. Це важлива складова для будь-якого веб-проекту, оскільки вона забезпечує доступність та стабільність вашого веб-сайту в Інтернеті.</p>
+                <p class="ty-design">Основні принципи роботи хостингу:</p>
+                <ul class="ty-design">
+                    <li>Споживачі вибирають план хостингу від провайдера, залежно від їхніх потреб та бюджету.</li>
+                    <li>Файли та дані веб-сайту завантажуються на сервери хостингу.</li>
+                    <li>Хостинг забезпечує необхідні ресурси та інфраструктуру для доступу до веб-сайту через Інтернет.</li>
+                    <li>Користувачі можуть керувати та оновлювати свій веб-сайт через спеціалізовані інструменти адміністрування.</li>
+                </ul>
+            </div>
+            <div class="right-section">
+                <img src="host1.jpg" alt="Хостинг Image 1">
+                <img src="host2.png" alt="Хостинг Image 2">
+                <img src="host3.jpg" alt="Хостинг Image 3">
+            </div>
+        </div>
+        <div class="post">
+            <div class="left-section">
+                <h2>Як працюють запити</h2>
+                <p class="ty-design">Запит - це HTTP-запит, який надсилається серверу від клієнта з метою отримання певної інформації чи виконання конкретної операції. Запити використовуються для взаємодії між клієнтом (браузером або іншим клієнтським застосунком) та веб-сервером.</p>
+                <p class="ty-design">Основні етапи роботи запитів:</p>
+                <ul class="ty-design">
+                    <li>Клієнт формує HTTP-запит, вказуючи метод (GET, POST, PUT, DELETE) та інші параметри.</li>
+                    <li>Запит надсилається на веб-сервер, який обробляє його та відповідає з необхідною інформацією чи результатом операції.</li>
+                    <li>Веб-сервер повертає відповідь клієнту, який обробляє отримані дані або відображає результат на сторінці.</li>
+                </ul>
+                <p class="ty-design">Типи запитів:</p>
+                <ul class="ty-design">
+                    <li><strong>GET:</strong> Використовується для отримання даних від сервера.</li>
+                    <li><strong>POST:</strong> Використовується для відправлення даних на сервер, наприклад, при відправці форм.</li>
+                    <li><strong>PUT:</strong> Використовується для оновлення існуючих даних на сервері.</li>
+                    <li><strong>DELETE:</strong> Використовується для видалення даних на сервері.</li>
+                </ul>
+            </div>
+            <div class="right-section">
+                <img src="request1.jpg" alt="Запит Image 1">
+                <img src="request2.jpg" alt="Запит Image 2">
+                <img src="request3.png" alt="Запит Image 3">
+            </div>
+        </div>
+        <h3>Перевірьте роботу ШІ, цей ШІ аналізує ваш малюнок та пише наскільки відсотків він замальований</h3>
+        <canvas id="canvas" width="500" height="300"></canvas>
+        <button id="checkButton">Перевірити</button>
+        <p id="clarityDisplay"></p>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <p class="ty-design">Як він працює?: коли ви малюєте і перестаєте, данний ШІ аналізує ваш малюнок та рахує пікселі які ви намалювали і зрівнює їх з розміром дошки на якій ви малюєте, далі він робить математичний приклад та виводить його результат у відсотках.</p>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <h2 class="big">Таперь ви краще ознайомились з ШІ, а чи ви хочете передати йому якесь повідомлення?</h2>
+            <p class="ty-design">Якщо ваша відповідь - так то наш музей технологій допоможе вам з цим!</p>
+            <p class="ty-design">Ви пишете якесь повідомлення для ШІ, відправляєте його і за допомогою посту та Hold My Coffee ваше повідомлення передається до нашого контейнеру, який ми читаємо різним ШІ кожен місяць</p>
+            <p class="ty-design">Ви можете вибрати якому ШІ хочете передати повідомлення.</p>
+            <h2 class="ty-design">Спробуйте!</h2>
+            <select name="shis" id="shi-select">
+                <option value="">\\ Будь ласка виберіть ШІ //</option>
+                <option value="chatgpt">ChatGPT</option>
+                <option value="copilot">Microsoft Copilot</option>
+                <option value="picture">Picture Creator</option>
+            </select>
+            <textarea id="message" placeholder="Ваше повідомлення..."></textarea>
+            <button id="sendButton">Відправити</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="reaction-section">
+            <img src="case.svg" alt="Кейс іконка" height="200">
+            <h2>Реакція ШІ</h2>
+            <select name="shi" id="shi-selectt">
+                <option value="">\\ Будь ласка виберіть ШІ //</option>
+                <option value="chatgptt">ChatGPT</option>
+                <option value="copilott">Microsoft Copilot</option>
+                <option value="picturee">Picture Creator</option>
+            </select>
+            <button id="sendButtonn">Відправити</button>
+            <p id="reactionText"></p>
+        </div>
+        <br><br><br><br><br><br>
+        <h2 class="big">Малюнки від штучного інтелекту</h2>    
+        <div class="image-container">
+            <img src="aiimage1.jpg" alt="Картинка 1" class="animated-image">
+            <img src="aiimage2.jpg" alt="Картинка 2" class="animated-image">
+            <img src="aiimage3.jpg" alt="Картинка 3" class="animated-image">
+            <img src="aiimage4.jpg" alt="Картинка 4" class="animated-image">
+            <img src="aiimage5.jpg" alt="Картинка 5" class="animated-image">
+        </div>              
+    </div>
+    <script>
+        document.getElementById('sendButtonn').addEventListener('click', function() {
+            var shiSelect = document.getElementById('shi-selectt');
+            var reactionText = document.getElementById('reactionText');
+            var selectedShi = shiSelect.value;
+            var reactions = {
+                'chatgptt': ['ChatGPT: [Поки-що реакції немає, але вона скоро буде!]'],
+                'copilott': ['Microsoft Copilot: [Поки-що реакції немає, але вона скоро буде!]'],
+                'picturee': ['Picture Creator: [Поки-що реакції немає, але вона скоро буде!]']
+            };
+            if (selectedShi in reactions) {
+                var randomIndex = Math.floor(Math.random() * reactions[selectedShi].length);
+                reactionText.textContent = reactions[selectedShi][randomIndex];
+            } else {
+                reactionText.textContent = 'Будь ласка, виберіть ШІ!';
+            }
+
+            if (selectedShi in reactions) {
+            var randomIndex = Math.floor(Math.random() * reactions[selectedShi].length);
+            reactionText.textContent = reactions[selectedShi][randomIndex];
+            if (selectedShi === 'picturee') {
+                var pictureURL = '';
+                var imgElement = document.createElement('img');
+                imgElement.src = pictureURL;
+                imgElement.alt = 'Картинка яку згенерував ШІ';
+                reactionText.appendChild(document.createElement('br'));
+                reactionText.appendChild(imgElement);
+            }
+        } else {
+            reactionText.textContent = 'Будь ласка, виберіть ШІ!';
+        }
+    });
+    </script>    
+    <script src="mainscript.js"></script>
+</body>
+</html>

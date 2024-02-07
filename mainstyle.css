@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.text h1 {
+    font-size: 3rem;
+    color: #33a1ff;
+    margin-bottom: 20px;
+}
+
+.ty {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #ddd;
+}
+
+.ty::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #33a1ff;
+    margin-top: 5px;
+}
+
+.post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.left-section {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-section img {
+    width: 30%;
+    border-radius: 5px;
+}
+
+.ty-design {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #33a1ff;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+canvas {
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #33a1ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #1f7bbd;
+}
+
+#clarityDisplay {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #33a1ff;
+}
+
+.VirtualButton {
+    height: 600px;
+    width: 700px;
+    font-size: 90px;
+}
+
+.image-container {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-image {
+    width: 150px; /* Збільшимо ширину картинок */
+    height: auto;
+    margin-right: 10px; /* Відстань між картинками */
+    border-radius: 20px; /* Зробимо рамки картинок більш круглими */
+    animation: moveRight 3s linear infinite;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(100vw + 150px)); /* Передвинемо картинку за границі екрану */
+    }
+}
