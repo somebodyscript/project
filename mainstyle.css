@@ -129,3 +129,15 @@ button:hover {
         transform: translateX(calc(100vw + 150px)); /* Передвинемо картинку за границі екрану */
     }
 }
+
+.created-ai {
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.created-ai img {
+    width: 100px;
+    border-radius: 50%;
+}

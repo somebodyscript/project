@@ -129,5 +129,187 @@ document.getElementById('VirtualButton').addEventListener('click', function() {
 
 const images = document.querySelectorAll('.image-container img');
 images.forEach((image, index) => {
-    image.style.animationDuration = `${10 + index * 2}s`; // Змініть потрібну тривалість анімації
+    image.style.animationDuration = `${10 + index * 2}s`;
 });
+
+function createAI() {
+  var name = document.getElementById('aiName').value;
+  var model = document.getElementById('aiModel').value;
+  var intelligence = document.getElementById('aiIntelligence').value;
+
+  var avatar = document.getElementById('aiAvatar').files[0];
+  var reader = new FileReader();
+  reader.onload = function(e) {
+      var avatarUrl = e.target.result;
+      displayAI(name, model, avatarUrl, intelligence);
+  }
+  reader.readAsDataURL(avatar);
+}
+
+function createAI() {
+  var name = document.getElementById('aiName').value;
+  var model = document.getElementById('aiModel').value;
+  var intelligence = document.getElementById('aiIntelligence').value;
+  var avatar = document.getElementById('aiAvatar').files[0];
+  var reader = new FileReader();
+  reader.onload = function(e) {
+      var avatarUrl = e.target.result;
+      displayAI(name, model, avatarUrl, intelligence);
+  }
+  reader.readAsDataURL(avatar);
+}
+
+function displayAI(name, model, avatarUrl, intelligence) {
+  var createdAI = document.getElementById('createdAI');
+  createdAI.innerHTML = `
+      <h2>${name}</h2>
+      <img src="${avatarUrl}" alt="ШІ Аватар">
+      <p>Модель: ${model}</p>
+      <p>Інтелект: ${intelligence}</p>
+      <div id="aiResponse" class="ai-response"></div>
+  `;
+}
+
+function sendMessageToAI() {
+  var userInput = document.getElementById('userInput').value;
+  var intelligence = document.getElementById('aiIntelligence').value;
+  var response = generateResponse(intelligence, userInput);
+  document.getElementById('aiResponse').innerText = response;
+}
+
+function generateResponse(intelligence, userInput, name) {
+  switch(intelligence) {
+      case 'mathExpressions':
+          return solveMathExpression(userInput);
+      case 'miniSites':
+          return createMiniSite(userInput, name);
+      case 'randomizer':
+          return getRandomNumber(userInput);
+      case 'customGreeting':
+          return generateGreeting(name);
+      case 'reverseText':
+          return reverseText(userInput);
+      case 'jokester':
+          return getRandomProgrammingJoke();
+      case 'reminder':
+          return setReminder(userInput);
+      default:
+          return 'Інтелекту не вибрано.';
+  }
+}
+
+function getRandomProgrammingJoke() {
+  const jokes = [
+      'Чому програмісти так люблять вихідні? Тому що вони усі з них - days off (дні офф).',
+      'Що каже програміст, коли його питають про плани на вихідні? "Йти на пляж (піч)".',
+      'Як вирубити програміста? Відключіть його кофемашину.',
+      'Що програміст каже своїй кофемашині? "Ще одну порцію, будь ласка".',
+      'Якщо програміст не відповідає на ваші повідомлення, це не відсутність відповіді, це async.',
+      'Що робить програміст перед важливою подією? Він викликає event.preventDefault();',
+      'Чому програміст завжди так страшенно оптимістичний? Він завжди бачить "return" у майбутньому.',
+      'Якщо програмісту подарувати весільний подарунок, відповідь буде: "Дякую за undefined gift".',
+      'Як програміст позбавляється від стресу? Онукуванням коду.',
+      'Що говорить програміст, коли він краде чужий код? "Це позичка!"',
+      'Якщо видалити файл з комп\'ютера і нікому не сказати, чи відбудеться помилка 404 в житті?',
+      'Як називається група програмістів, яка бореться зі спамом? Анти-вірус.',
+      'Що робить програміст після важкого робочого дня? break;',
+      'Як виглядає обід програміста? 01010100 01010101',
+  ];
+
+  const randomIndex = Math.floor(Math.random() * jokes.length);
+  return jokes[randomIndex];
+}
+
+function setReminder(input) {
+  const [text, timeInSeconds] = input.split(' ');
+  const timeInMilliseconds = parseInt(timeInSeconds) * 1000;
+
+  setTimeout(() => {
+      alert(`Нагадування: ${text}`);
+  }, timeInMilliseconds);
+
+  return `Нагадування встановлено: ${text}, через ${timeInSeconds} секунд.`;
+}
+
+function generateGreeting() {
+  return `Привіт! Вітаю тебе у музеї технологій, я доволі швидка та технологічна модель і я можу виконувати завдання різні поставленні завдання.`;
+}
+
+function reverseText(text) {
+  return text.split('').reverse().join('');
+}
+
+
+function solveMathExpression(input) {
+  try {
+      input = input.replace(/x/g, '*');
+      input = input.replace(/:/g, '/');
+      var result = eval(input);
+      return `Результат: ${result}`;
+  } catch (error) {
+      return 'Неправильна логіка запиту.';
+  }
+}
+
+function createMiniSite(input, name) {
+  const htmlContent = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${input}</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+  p {
+    color: #666;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>${input}</h1>
+  <p>Від ШІ</p>
+</div>
+</body>
+</html>
+`;
+  const blob = new Blob([htmlContent], { type: 'text/html' });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement('a');
+  anchor.href = url;
+  anchor.download = `${input}.html`;
+  anchor.click();
+  URL.revokeObjectURL(url);
+}
+
+
+function getRandomNumber(input) {
+  var numbers = input.split(' ').map(Number);
+  if (numbers.length === 2 && !isNaN(numbers[0]) && !isNaN(numbers[1])) {
+      var min = Math.min(numbers[0], numbers[1]);
+      var max = Math.max(numbers[0], numbers[1]);
+      var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      return `Рандомне число від ${min} до ${max}: ${randomNumber}`;
+  } else {
+      return 'Будь ласка напишіть два валідних числа з пробілами.';
+  }
+}

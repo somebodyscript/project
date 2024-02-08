@@ -120,6 +120,45 @@
             <img src="aiimage5.jpg" alt="Картинка 5" class="animated-image">
         </div>              
     </div>
+    <br><br><br><br><br>
+    <div class="container">
+        <h2 class="big">Створи власного ШІ</h2>
+        <div class="options">
+            <label for="aiName">Назва:</label>
+            <input type="text" id="aiName" placeholder="Тут напиши ім'я твоєго ШІ">
+
+            <label for="aiModel">Модель:</label>
+            <select id="aiModel">
+                <option value="quantumMind">QuantumMind</option>
+                <option value="neuralGenius">NeuralGenius</option>
+                <option value="cognitiveEngine">CognitiveEngine</option>
+                <option value="thoughtCraft">ThoughtCraft</option>
+                <option value="synapticOracle">SynapticOracle</option>
+            </select>
+
+
+            <label for="aiAvatar">Аватарка:</label>
+            <input type="file" id="aiAvatar">
+
+            <label for="aiIntelligence">Інтелект:</label>
+            <select id="aiIntelligence">
+                <option value="mathExpressions">Вирішувач математичних виразів</option>
+                <option value="miniSites">Створювач міні-сайтів</option>
+                <option value="randomizer">Рандомайзер</option>
+                <option value="customGreeting">Персональне привітання</option>
+                <option value="reverseText">Реверс тексту</option>
+                <option value="jokester">Жартівник</option>
+                <option value="reminder">Нагадувач</option>
+            </select>
+
+
+            <textarea id="userInput" placeholder="Тут напиши повідомлення твоєму ШІ"></textarea>
+
+            <button onclick="createAI()">Створити</button>
+            <button onclick="sendMessageToAI()">Відправити повідомлення</button>
+        </div>
+        <div id="createdAI" class="created-ai"></div>
+    </div>
     <script>
         document.getElementById('sendButtonn').addEventListener('click', function() {
             var shiSelect = document.getElementById('shi-selectt');
