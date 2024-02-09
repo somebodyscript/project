@@ -114,10 +114,10 @@ button:hover {
 }
 
 .animated-image {
-    width: 150px; /* Збільшимо ширину картинок */
+    width: 150px;
     height: auto;
-    margin-right: 10px; /* Відстань між картинками */
-    border-radius: 20px; /* Зробимо рамки картинок більш круглими */
+    margin-right: 10px;
+    border-radius: 20px;
     animation: moveRight 3s linear infinite;
 }
 
@@ -126,7 +126,7 @@ button:hover {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(100vw + 150px)); /* Передвинемо картинку за границі екрану */
+        transform: translateX(calc(100vw + 150px));
     }
 }
 
@@ -141,3 +141,102 @@ button:hover {
     width: 100px;
     border-radius: 50%;
 }
+
+.containerr {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .createown {
+    color: #333;
+    text-align: center;
+    font-size: 38px;
+    margin-left: 20px;
+  }
+  .minitextt {
+    color: #666;
+    text-align: center;
+  }
+  .typing-text {
+    color: #222;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    border-right: .15em solid orange;
+    font-size: 24px;
+    animation: typing 5s steps(40, end), blink-caret .5s step-end infinite;
+  }
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+  }
+  .hidden {
+    display: none;
+  }
+
+  .web-developer-corner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.code-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.code-input {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+.window {
+    width: 800px;
+    height: 500px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.stars {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .star {
+    color: #ddd;
+    transition: color 0.3s;
+    margin-right: 5px;
+  }
+  
+  .star:hover {
+    color: #ffd700;
+  }
+  
+  .star.active {
+    color: #ffd700;
+    animation: sparkle 0.5s ease-in-out;
+  }
+  
+  @keyframes sparkle {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  

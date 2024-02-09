@@ -313,3 +313,55 @@ function getRandomNumber(input) {
       return 'Будь ласка напишіть два валідних числа з пробілами.';
   }
 }
+
+const typingTexts = document.querySelectorAll('.typing-text');
+let currentIndex = 0;
+
+function typeNextText() {
+  if (currentIndex > 0) {
+    typingTexts[currentIndex - 1].classList.add('hidden');
+  }
+
+  typingTexts[currentIndex].classList.remove('hidden');
+
+  currentIndex = (currentIndex + 1) % typingTexts.length;
+  setTimeout(typeNextText, 5000);
+}
+
+  typeNextText();
+
+function updateResult() {
+  const htmlCode = document.getElementById('htmlCode').value;
+  const cssCode = document.getElementById('cssCode').value;
+  const jsCode = document.getElementById('jsCode').value;
+
+  const resultFrame = document.getElementById('resultFrame');
+  const combinedCode = `
+      <html>
+          <head>
+              <style>${cssCode}</style>
+              <script>${jsCode}</script>
+          </head>
+          <body>
+              ${htmlCode}
+          </body>
+        </html>
+    `;
+    resultFrame.srcdoc = combinedCode;
+}
+
+function sendStar(rating) {
+  var webhookURL = 'https://discord.com/api/webhooks/1205434917572579358/SLg2s-4A1KFLwOaYJECcMn2E6iRz_SNM82WEV9i9_MGFtm1gDvDXP5A7ZuX-Ndn4aWYc';
+  var message = 'Користувач виставив оцінку: ' + rating + ' / 5 зірок 🌟';
+
+  var stars = document.querySelectorAll('.star');
+  stars.forEach((star, index) => {
+    star.classList.remove('active');
+    if (index < rating) {
+      star.classList.add('active');
+    }
+  });
+
+  var url = 'https://holdmycoffee.000.pe/index.html?urlInput=' + webhookURL + '&requestInput=' + encodeURIComponent(message);
+  window.open(url, '_blank');
+}

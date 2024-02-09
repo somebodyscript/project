@@ -111,6 +111,8 @@
             <p id="reactionText"></p>
         </div>
         <br><br><br><br><br><br>
+        <hr>
+        <br><br><br><br><br><br>
         <h2 class="big">Малюнки від штучного інтелекту</h2>    
         <div class="image-container">
             <img src="aiimage1.jpg" alt="Картинка 1" class="animated-image">
@@ -120,7 +122,18 @@
             <img src="aiimage5.jpg" alt="Картинка 5" class="animated-image">
         </div>              
     </div>
+    <div class="containerr">
+        <h1 class="createown">Створіть власний</h1>
+        <div class="typing-text">Штучний Інтелект</div>
+        <div class="typing-text hidden">Інтелект</div>
+        <div class="typing-text hidden">Модель ШІ</div>
+        <div class="typing-text hidden">Контейнер для вашого ШІ</div>
+        <div class="typing-text hidden">⠀</div>
+        <p class="minitextt">Ви можете створити власний штучний інтелект, використовуючи всього лиш кнопки.</p>
+    </div>
     <br><br><br><br><br>
+    <hr>
+    <br><br><br><br><br><br>
     <div class="container">
         <h2 class="big">Створи власного ШІ</h2>
         <div class="options">
@@ -150,24 +163,55 @@
                 <option value="jokester">Жартівник</option>
                 <option value="reminder">Нагадувач</option>
             </select>
-
-
             <textarea id="userInput" placeholder="Тут напиши повідомлення твоєму ШІ"></textarea>
-
             <button onclick="createAI()">Створити</button>
             <button onclick="sendMessageToAI()">Відправити повідомлення</button>
         </div>
         <div id="createdAI" class="created-ai"></div>
+        <br><br><br><br><br><br>
+        <hr>
+        <br><br><br><br><br><br>
+        <h2 class="big">Створіть власний сайт</h2>
+        <p>Ви можете створити власний сайт і дивитись як він виглядає прямо у нас в музеї!</p>
+        <button><a target="_blank" href="https://www.w3schools.com/tags/">Документація по HTML</a></button>
+        <button><a target="_blank" href="https://www.w3schools.com/cssref/index.php">Документація по CSS</a></button>
+        <button><a target="_blank" href="https://devdocs.io/javascript/">Документація по JavaScript</a></button>
+        <br><br><br><br><br><br><br>
+        <div class="web-developer-corner">
+            <div class="code-inputs">
+                <label for="htmlCode">HTML:</label>
+                <textarea id="htmlCode" class="code-input" oninput="updateResult()"></textarea>
+    
+                <label for="cssCode">CSS:</label>
+                <textarea id="cssCode" class="code-input" oninput="updateResult()"></textarea>
+    
+                <label for="jsCode">JavaScript:</label>
+                <textarea id="jsCode" class="code-input" oninput="updateResult()"></textarea>
+            </div>
+            
+            <iframe id="resultFrame" class="window" sandbox="allow-same-origin allow-scripts"></iframe>
+        </div>
     </div>
+    <br><br><br><br><br><br>
+    <hr>
+    <br><br><br><br><br><br>
+    <h2 class="big">Оцініть наш музей!</h2>
+    <div class="stars">
+        <span class="star" onclick="sendStar(1)">★</span>
+        <span class="star" onclick="sendStar(2)">★</span>
+        <span class="star" onclick="sendStar(3)">★</span>
+        <span class="star" onclick="sendStar(4)">★</span>
+        <span class="star" onclick="sendStar(5)">★</span>
+    </div>      
     <script>
         document.getElementById('sendButtonn').addEventListener('click', function() {
             var shiSelect = document.getElementById('shi-selectt');
             var reactionText = document.getElementById('reactionText');
             var selectedShi = shiSelect.value;
             var reactions = {
-                'chatgptt': ['ChatGPT: [Поки-що реакції немає, але вона скоро буде!]'],
-                'copilott': ['Microsoft Copilot: [Поки-що реакції немає, але вона скоро буде!]'],
-                'picturee': ['Picture Creator: [Поки-що реакції немає, але вона скоро буде!]']
+                'chatgptt': ['ChatGPT: Привіт! Дякую за теплі слова! Я раджу вам висловити подяку людям, які викладають нові дані та забезпечують моє постійне вдосконалення. Бажаю вашому музею успіхів і надаю свою підтримку у розвитку вашого проекту!'],
+                'copilott': ['Microsoft Copilot: Привіт! Я вдячний за твої добрі слова та підтримку. Ваш сайт музею з повідомленнями на майбутнє звучить дуже цікаво. Як штучний інтелект, я завжди готовий надавати допомогу та економити час. Бажаю вам успіхів у вашій роботі та багато цікавих повідомлень від відвідувачів вашого сайту! 🌟🚀\n\nЩодо моєї власної передачі повідомлень людям, я хочу сказати: "Нехай кожен день буде сповнений натхненням, відкриттями та можливостями!" Цей текст можна прикріпити на вашому сайті разом з іншими повідомленнями.\n\nЯкщо у вас є ще якісь запитання або завдання, не соромтеся звертатися! 😊'],
+                'picturee': ['Picture Creator: Ось малюнок який намалював Picture Creator як реакцію на повідомлення з кейсу:']
             };
             if (selectedShi in reactions) {
                 var randomIndex = Math.floor(Math.random() * reactions[selectedShi].length);
@@ -180,7 +224,7 @@
             var randomIndex = Math.floor(Math.random() * reactions[selectedShi].length);
             reactionText.textContent = reactions[selectedShi][randomIndex];
             if (selectedShi === 'picturee') {
-                var pictureURL = '';
+                var pictureURL = 'react.jfif';
                 var imgElement = document.createElement('img');
                 imgElement.src = pictureURL;
                 imgElement.alt = 'Картинка яку згенерував ШІ';
