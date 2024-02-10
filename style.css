@@ -5,6 +5,7 @@ body {
 }
 
 header {
+    font-family: 'Grandstander', cursive;
     background-color: #222030;
     color: #000000;
     padding: 20px 0;
@@ -331,6 +332,7 @@ header {
 
 .big {
     font-size: 48px;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .last-last-section {
@@ -366,6 +368,7 @@ header {
 }
 
 .footer1 {
+    font-family: 'Honk', system-ui;
     background-color: #151419;
     color: white;
     display: inline-block;
