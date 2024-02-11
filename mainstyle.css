@@ -6,6 +6,48 @@ body {
     color: #fff;
 }
 
+.green-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(81, 255, 0, 0.5);
+    filter: blur(20px);
+    animation: moveCircle 10s linear infinite alternate;
+    z-index: -1;
+}
+
+.blue-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 255, 0.5);
+    filter: blur(20px);
+    animation: moveCircle 15s linear infinite alternate;
+    z-index: -1;
+}
+
+.yellow-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(177, 171, 57, 0.5);
+    filter: blur(20px);
+    animation: moveCircle 20s linear infinite alternate;
+    z-index: -1;
+}
+
+@keyframes moveCircle {
+    from {
+        transform: translate(-50%, -50%);
+    }
+    to {
+        transform: translate(calc(100vw - 50px), calc(100vh - 50px));
+    }
+}
+
 .container {
     text-align: center;
     margin-top: 50px;

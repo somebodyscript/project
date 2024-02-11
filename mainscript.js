@@ -147,3 +147,12 @@ function sendStar(rating) {
   var url = 'https://holdmycoffee.000.pe/index.html?urlInput=' + webhookURL + '&requestInput=' + encodeURIComponent(message);
   window.open(url, '_blank');
 }
+
+window.addEventListener('scroll', function() {
+  var scrollPosition = window.scrollY;
+  var circles = document.querySelectorAll('.green-circle, .blue-circle, .yellow-circle');
+
+  circles.forEach(function(circle) {
+      circle.style.top = scrollPosition + 'px';
+  });
+});
