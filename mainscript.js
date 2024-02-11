@@ -132,9 +132,10 @@ images.forEach((image, index) => {
     image.style.animationDuration = `${10 + index * 2}s`;
 });
 
-function sendStar(rating) {
+function sendStar(rating, messagetext) {
+  var messagetext = document.getElementById('messagetext').value;
   var webhookURL = 'https://discord.com/api/webhooks/1205434917572579358/SLg2s-4A1KFLwOaYJECcMn2E6iRz_SNM82WEV9i9_MGFtm1gDvDXP5A7ZuX-Ndn4aWYc';
-  var message = 'Користувач виставив оцінку: ' + rating + ' / 5 зірок 🌟';
+  var message = 'Користувач виставив оцінку: ' + rating + ' / 5 зірок 🌟 / 💬 Повідомлення: ' + messagetext;
 
   var stars = document.querySelectorAll('.star');
   stars.forEach((star, index) => {

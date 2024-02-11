@@ -15,6 +15,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100&display=swap" rel="stylesheet">
+    <noscript>
+        <style>
+            body > * {
+                display: none !important;
+            }
+
+            body > .nojs {
+                display: flex !important;
+            }
+        </style>
+        <p class="nojs">Цьому вебсайту обов'язково потрібен javascript, будь ласка увімкніть його.</p>
+    </noscript>
 </head>
 <body>
     <div class="green-circle"></div>
@@ -155,6 +167,8 @@
             <img src="./images/aiimage3.jpg" alt="Картинка 3" class="animated-image">
             <img src="./images/aiimage4.jpg" alt="Картинка 4" class="animated-image">
             <img src="./images/aiimage5.jpg" alt="Картинка 5" class="animated-image">
+            <img src="./images/aiimage6.jfif" alt="Картинка 6" class="animated-image">
+            <img src="./images/aiimage7.jfif" alt="Картинка 7" class="animated-image">
         </div>              
     </div>
     <hr>
@@ -168,6 +182,7 @@
         <span class="star" onclick="sendStar(3)">★</span>
         <span class="star" onclick="sendStar(4)">★</span>
         <span class="star" onclick="sendStar(5)">★</span>
+        <textarea id="messagetext" placeholder="Ваш відгук про музей тут (напишіть спочатку його перед натисканням на зірку)"></textarea>
     </div>      
     <script>
         document.getElementById('sendButtonn').addEventListener('click', function() {
@@ -202,6 +217,7 @@
         }
     });
     </script>    
+    <script src="./scan.js"></script>
     <script src="mainscript.js"></script>
 </body>
 </html>
