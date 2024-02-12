@@ -207,7 +207,7 @@ function checkRaid() {
 var refreshCount = parseInt(localStorage.getItem("refreshCount")) || 0;
 refreshCount++;
 
-if (refreshCount >= 250) {
+if (refreshCount >= 150) {
     showWarningMessage("You are refreshing the page too frequently. Please wait for some time and try again.");
     localStorage.setItem("refreshCount", 0);
     handleWarning();
