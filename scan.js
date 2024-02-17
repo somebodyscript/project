@@ -1,3 +1,10 @@
+// WARNING: DONT DELETE THIS, JUST IGNORE!!
+// MODEL: HOTTEA ANTI-RAID
+// MIT LICENSE IS ACTIVE FOR THIS JAVASCRIPT CODE
+// POWERED BY HOTTEA SECURITY
+// THESE COMMENTS ARE NECESSARY FOR ANALYTICS (IF IN THE FUTURE YOU WANT TO CONNECT IT TO YOUR SITE) TO BE ABLE TO IDENTIFY YOUR MODEL.
+// DATE OF FIXATION OF THIS MODEL: 17.02.2024 16:07 EUROPE
+
 var style = document.createElement('style');
 style.innerHTML = `
     body {
@@ -66,7 +73,7 @@ function checkUserOnVisit() {
     if (!hasChecked) {
         var visitCount = parseInt(localStorage.getItem("visitCount")) || 0;
 
-        if (visitCount >= 100) {
+        if (visitCount >= 300) {
             showDangerMessage("Exceeded the allowable number of visits. Access denied.");
             return;
         }
@@ -168,7 +175,6 @@ function handleWarning() {
 setInterval(function() {
     localStorage.removeItem("visitCount");
     localStorage.removeItem("lastVisitTime");
-    localStorage.removeItem("refreshCount");
 }, 600000);
 
 window.onload = function() {
@@ -198,21 +204,10 @@ function checkRaid() {
         sessionStorage.setItem("lastVisit", new Date());
     }
 
-    if (sessionCount > 100) {
+    if (sessionCount > 500) {
         showWarningMessage("Exceeded the allowable number of sessions. First warning.");
         handleWarning();
     }
-}
-
-var refreshCount = parseInt(localStorage.getItem("refreshCount")) || 0;
-refreshCount++;
-
-if (refreshCount >= 250) {
-    showWarningMessage("You are refreshing the page too frequently. Please wait for some time and try again.");
-    localStorage.setItem("refreshCount", 0);
-    handleWarning();
-} else {
-    localStorage.setItem("refreshCount", refreshCount);
 }
 
 var underAttack = false;

@@ -25,7 +25,7 @@
                 display: flex !important;
             }
         </style>
-        <p class="nojs">Цьому вебсайту обов'язково потрібен javascript, будь ласка увімкніть його.</p>
+        <p class="nojs">Цьому сайту обов'язково потрібен javascript, будь ласка увімкніть його</p>
     </noscript>
 </head>
 <body>
@@ -183,7 +183,37 @@
         <span class="star" onclick="sendStar(4)">★</span>
         <span class="star" onclick="sendStar(5)">★</span>
         <textarea id="messagetext" placeholder="Ваш відгук про музей тут (напишіть спочатку його перед натисканням на зірку)"></textarea>
-    </div>      
+    </div>
+    <br><br><br><br><br>
+    <h2 class="big">Опитування</h2>
+    <p class="ty-design">Чи подобаються вам ШІ?</p>
+    <br>
+    <textarea id="answer1" placeholder="Так або НІ або ваша відповідь"></textarea>
+    <br><br><br>
+    <hr>
+    <p class="ty-design">Чи все було вам зрозуміло?</p>
+    <br>
+    <textarea id="answer2" placeholder="Так або НІ або ваша відповідь"></textarea>
+    <br><br><br>
+    <hr>
+    <p class="ty-design">Як ви думаєте, наскільки швидко розвиваються ШІ?</p>
+    <br>
+    <textarea id="answer3" placeholder="Ваша відповідь тут"></textarea>
+    <br><br><br>
+    <hr>
+    <p class="ty-design">Яка ваша думка про ШІ?</p>
+    <br>
+    <textarea id="answer4" placeholder="Ваша відповідь тут"></textarea>
+    <br><br><br>
+    <hr>
+    <p class="ty-design">Ви знаєте про хостинги? Якщо так, то назвіть деякі з них</p>
+    <br>
+    <textarea id="answer5" placeholder="Ваша відповідь тут"></textarea>
+    <br><br><br>
+    <hr>
+    <button onclick="sendAnswer()">Відправити</button>
+    <br><br><br><br><br>
+    <h3 class="ty">&#169 2024 всі права захищено</h3>
     <script>
         document.getElementById('sendButtonn').addEventListener('click', function() {
             var shiSelect = document.getElementById('shi-selectt');

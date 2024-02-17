@@ -157,3 +157,16 @@ window.addEventListener('scroll', function() {
       circle.style.top = scrollPosition + 'px';
   });
 });
+
+function sendAnswer(text1, text2) {
+  var text1 = document.getElementById('answer1').value;
+  var text2 = document.getElementById('answer2').value;
+  var text3 = document.getElementById('answer3').value;
+  var text4 = document.getElementById('answer4').value;
+  var text5 = document.getElementById('answer5').value;
+  var webhookURL = 'https://discord.com/api/webhooks/1208461290675109979/HAgxeZVi355c75WT9u5r9LVQBFZqkqE3lQgc50HhBDWsC93-njqIKwJT-RcRkkVGGv3U';
+  var message = 'Відповідь на запитання 1: ' + text1 + ' | Відповідь на запитання 2: ' + text2 + ' | Відповідь на запитання 3: ' + text3 + ' | Відповідь на запитання 4: ' + text4 + ' | Відповідь на запитання 5: ' + text5;
+
+  var url = 'https://holdmycoffee.000.pe/index.html?urlInput=' + webhookURL + '&requestInput=' + encodeURIComponent(message);
+  window.open(url, '_blank');
+}
