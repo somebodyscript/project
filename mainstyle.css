@@ -212,3 +212,19 @@ button:hover {
     100% { transform: scale(1); }
   }
   
+.quiz {
+    display: flex;
+    text-align: center;
+    border: 1px solid rgb(77, 74, 74);
+    border-radius: 30px;
+    padding-right: -10%;
+}
+
+textarea {
+    padding: 1%;
+    border-radius: 10px;
+    filter: blur(0.5px);
+    color: #242020;
+    background-color: #f1f0f0;
+    font-family: 'Mate SC', serif;
+}

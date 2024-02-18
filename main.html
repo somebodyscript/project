@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100&display=swap" rel="stylesheet">
+    <link rel="icon" href="Vector4.svg">
     <noscript>
         <style>
             body > * {
@@ -169,6 +170,10 @@
             <img src="./images/aiimage5.jpg" alt="Картинка 5" class="animated-image">
             <img src="./images/aiimage6.jfif" alt="Картинка 6" class="animated-image">
             <img src="./images/aiimage7.jfif" alt="Картинка 7" class="animated-image">
+            <img src="./images/aiimage8.jfif" alt="Картинка 8" class="animated-image">
+            <img src="./images/aiimage9.jfif" alt="Картинка 9" class="animated-image">
+            <img src="./images/aiimage10.jfif" alt="Картинка 10" class="animated-image">
+            <img src="./images/aiimage11.jfif" alt="Картинка 11" class="animated-image">
         </div>              
     </div>
     <hr>
@@ -185,33 +190,32 @@
         <textarea id="messagetext" placeholder="Ваш відгук про музей тут (напишіть спочатку його перед натисканням на зірку)"></textarea>
     </div>
     <br><br><br><br><br>
-    <h2 class="big">Опитування</h2>
-    <p class="ty-design">Чи подобаються вам ШІ?</p>
-    <br>
-    <textarea id="answer1" placeholder="Так або НІ або ваша відповідь"></textarea>
-    <br><br><br>
     <hr>
-    <p class="ty-design">Чи все було вам зрозуміло?</p>
-    <br>
-    <textarea id="answer2" placeholder="Так або НІ або ваша відповідь"></textarea>
     <br><br><br>
-    <hr>
-    <p class="ty-design">Як ви думаєте, наскільки швидко розвиваються ШІ?</p>
-    <br>
-    <textarea id="answer3" placeholder="Ваша відповідь тут"></textarea>
-    <br><br><br>
-    <hr>
-    <p class="ty-design">Яка ваша думка про ШІ?</p>
-    <br>
-    <textarea id="answer4" placeholder="Ваша відповідь тут"></textarea>
-    <br><br><br>
-    <hr>
-    <p class="ty-design">Ви знаєте про хостинги? Якщо так, то назвіть деякі з них</p>
-    <br>
-    <textarea id="answer5" placeholder="Ваша відповідь тут"></textarea>
-    <br><br><br>
-    <hr>
-    <button onclick="sendAnswer()">Відправити</button>
+    <div class="quiz">
+        <h2 class="big">Опитування</h2>
+        <p class="ty-design">Чи подобаються вам ШІ?</p>
+        <br>
+        <textarea id="answer1" placeholder="Так або НІ або ваша відповідь"></textarea>
+        <br><br><br>
+        <p class="ty-design">Чи все було вам зрозуміло?</p>
+        <br>
+        <textarea id="answer2" placeholder="Так або НІ або ваша відповідь"></textarea>
+        <br><br><br>
+        <p class="ty-design">Як ви думаєте, наскільки швидко розвиваються ШІ?</p>
+        <br>
+        <textarea id="answer3" placeholder="Ваша відповідь тут"></textarea>
+        <br><br><br>
+        <p class="ty-design">Яка ваша думка про ШІ?</p>
+        <br>
+        <textarea id="answer4" placeholder="Ваша відповідь тут"></textarea>
+        <br><br><br>
+        <p class="ty-design">Ви знаєте про хостинги? Якщо так, то назвіть деякі з них</p>
+        <br>
+        <textarea id="answer5" placeholder="Ваша відповідь тут"></textarea>
+        <br><br><br>
+        <button onclick="sendAnswer()">Відправити</button>
+    </div>
     <br><br><br><br><br>
     <h3 class="ty">&#169 2024 всі права захищено</h3>
     <script>
