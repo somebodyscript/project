@@ -86,7 +86,7 @@ function checkUserOnVisit() {
             visitFrequency++;
             localStorage.setItem("visitFrequency", visitFrequency);
 
-            if (visitFrequency >= 10) {
+            if (visitFrequency >= 70) {
                 showWarningMessage("Seems like you are visiting the site too often. Please wait a few minutes and try again.");
                 handleWarning();
                 return;
